@@ -6,4 +6,4 @@ See in GoL.js file
 
 ##
 
-Old project might be updated
+This is an old project might be updated
