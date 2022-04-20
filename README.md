@@ -2,7 +2,7 @@
 
 Javascript Game of life with P5 library 
 
-See in GOL.js file
+See in GoL.js file
 
 ##
 
