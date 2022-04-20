@@ -3,7 +3,7 @@ let grid;
 let cols;
 let rows;
 let resolution = 10;
-var gameSpeed = 500
+var gameSpeed = 10
 
 function make2DArray(cols, rows) {
   let arr = new Array(cols);
@@ -19,22 +19,34 @@ function setup() {
   rows = height / resolution;
 
   grid = make2DArray(cols, rows);
-  //randomPlacement();
   intitiateArraystatus();
 
-  //Moving Structurs\\
 
-  plannersCannon(50, false, false); //(coords, invert[vertical], returned[orizontal])  // **changer center en startX et StartY**
+  /*
+  *
+  *
+  *   Uncomment lines to show the stuctures
+  * 
+  *   (coordX, coordY) if possible (x, y, inverted[vertical], inverted[horizontal])
+  *
+  * 
+  */
+
+
+  // With movement
+
+  plannersCannon(50, false, false);
   // bigSpaceShip(10, 20);
-  //middleSpaceShip(20, 10);
-  //lilSpaceShip(10, 30);
-  //canadaGoose(20, 50);
-  //bigFuckingShip(100, 20);  ////ne marche po a revoir
+  // middleSpaceShip(20, 10);
+  // lilSpaceShip(10, 30);
+  // canadaGoose(20, 50);
+  // bigFuckingShip(100, 20);  //// warning not working
+
+
+  // Without movement
   
-  //Not Moving Structurs\\
-  
-  //helice(10);
-  //pentadecathlon(30);
+  // helice(10);
+  // pentadecathlon(30);
   // ossilateur(10, 15);
   // ossilateurArrounded(10, 30);
   // cross(35, 10);
@@ -47,7 +59,6 @@ function setup() {
 
 }
 setInterval(Draw, gameSpeed);
-//setInterval(randomPlacement, 120000);
 
 function Draw() {
   
@@ -67,11 +78,9 @@ function Draw() {
 
   let next = make2DArray(cols, rows);
 
-  // Compute next based on grid
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       let state = grid[i][j];
-      // Count live neighbors!
       let sum = 0;
       let neighbors = countNeighbors(grid, i, j);
 
