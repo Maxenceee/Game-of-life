@@ -35,11 +35,11 @@ function setup() {
 
   // With movement
 
-  plannersCannon(50, false, false);
+  // plannersCannon(50, false, false);
   // bigSpaceShip(10, 20);
   // middleSpaceShip(20, 10);
   // lilSpaceShip(10, 30);
-  // canadaGoose(20, 50);
+  canadaGoose(20, 50);
   // bigFuckingShip(100, 20);  //// warning not working
 
 
